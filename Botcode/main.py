@@ -27,4 +27,4 @@ def start_fun(message):
 
 
 
-bot.infinity_polling()
+bot.polling()
