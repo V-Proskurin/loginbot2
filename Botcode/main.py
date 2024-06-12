@@ -13,7 +13,7 @@ bot = telebot.TeleBot(TOKEN)
 def webAppKeyboardInline(): 
     keyboard = types.InlineKeyboardMarkup(row_width=1) 
     webApp = types.WebAppInfo("https://dev.x1team.ru/wp-admin/admin-ajax.php?action=wptelegram_login&source=WebAppData") # Переход на x1team, авторизация происходит в браузере телеграмм
-    login_url = types.LoginUrl(url = "https://dev.x1team.ru/wp-admin/admin-ajax.php?action=wptelegram_login", request_write_access = True) # Авторизация через внешний браузер
+    login_url = types.LoginUrl(url = "https://dev.x1team.ru/?action=wptelegram_login", request_write_access = True) # Авторизация через внешний браузер
     one = types.InlineKeyboardButton(text="Авторизация в telegram", web_app=webApp) 
     two = types.InlineKeyboardButton(text="Авторизация в браузере", login_url=login_url) 
     keyboard.add(one, two)  
